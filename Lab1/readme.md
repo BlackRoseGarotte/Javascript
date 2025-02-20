@@ -35,9 +35,11 @@
 
 Результат выполнения кода:
 ![alt-text](../Lab1/скрины1/alert-part.jpg)
+
 `alert("Привет, мир!");`-вывводит предупреждение в браузере, с надписью "Привет, мир!".
 
 ![alt-text](../Lab1/скрины1/script-part.jpg)
+
 `console.log("Hello, console!");`-выводит "Hello, console!" в консоль браузера.
 
 
@@ -118,6 +120,7 @@ if (score >= 90) {
 ![alr-text](../Lab1/скрины1/score.jpg)
 
 ![alt-text](../Lab1/скрины1/myHonestReaction.jpg)
+
 Принцип работы схож с C++.
 
 Во второй части кода
