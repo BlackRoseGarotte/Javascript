@@ -65,6 +65,16 @@ console.log("Сообщение в консоли");
 
 **isStudent** - логическая переменная, указывающая являюсь ли я студентом.
 
+```js
+name = "Vadim Balev"
+birthYear = 2005;
+isStudent = true;
+
+console.log(name);
+console.log(birthYear);
+console.log(isStudent);
+```
+
 ![alt-text](../Lab1/скрины1/variables.jpg)
 
 Вывел переменные в консоль.
