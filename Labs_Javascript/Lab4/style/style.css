@@ -1,0 +1,100 @@
+/* Основной стиль страницы */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px auto;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Заголовок */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Форма добавления */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+form input, form select, form button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1565c0;
+}
+
+/* Таблица транзакций */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead {
+  background-color: #eeeeee;
+  font-weight: bold;
+}
+
+/* Кнопка удаления */
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* Цвета строк */
+.positive {
+  background-color: #e8f5e9;
+}
+
+.negative {
+  background-color: #ffebee;
+}
+
+/* Полное описание */
+#full-description {
+  font-style: italic;
+  padding: 10px;
+  background-color: #fffde7;
+  border: 1px solid #fbc02d;
+  border-radius: 6px;
+}
+
+/* Общая сумма */
+#total {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #4caf50;
+}
