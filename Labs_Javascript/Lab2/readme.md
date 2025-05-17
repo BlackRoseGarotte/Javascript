@@ -19,7 +19,7 @@
 - **Уникальные типы транзакций:** `["debit", "credit"]` 
 ![Уникальные типы транзакций](../Lab2/scrins/types_of_tranzactions.png)  
 - **Общая сумма транзакций:** `400`
-![Общая сумма транзакций](../Lab2/scrins/tatal_amount_of_tranz.jpg)
+![Общая сумма транзакций](../Lab2/scrins/total_amount_of_tranz.jpg)
 - **Фильтр: транзакции типа 'debit':** `[{t1}, {t3}]` 
 ![Транзакции debit](../Lab2/scrins/total_amount_debit_tranz.jpg)
 - **Фильтр: транзакции в диапазоне дат (01.10 - 02.10):** `[{t1}, {t2}]` 
