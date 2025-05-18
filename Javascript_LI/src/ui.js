@@ -23,7 +23,7 @@ export function updateGameUI(scoreElement, resultElement, scores, lastRoundData)
         }
         resultElement.textContent = resultText;
     } else {
-         resultElement.textContent = 'Сделайте ваш выбор.'; // Начальное или сброшенное состояние
+         resultElement.textContent = 'Сделайте ваш выбор.'; 
     }
 }
 
@@ -36,15 +36,14 @@ export function renderHistoryList(containerElement, historyData) {
     containerElement.innerHTML = ''; // Очищаем текущий список
 
     if (historyData.length === 0) {
-        containerElement.textContent = 'История пуста.'; // Простой текст, если история пуста
+        containerElement.textContent = 'История пуста.'; 
         return;
     }
 
-    // Отображаем каждый раунд как параграф (или другой простой элемент)
     historyData.forEach(round => {
         const roundElement = document.createElement('p');
         roundElement.textContent = `Раунд ${round.round}: Игрок - ${choiceToText(round.player)}, Компьютер - ${choiceToText(round.computer)}, Результат - ${resultToText(round.result)}`;
-        // Можно добавить простой класс для стилизации результата
+       
          roundElement.style.color = resultColor(round.result);
 
         containerElement.appendChild(roundElement);
@@ -65,7 +64,6 @@ export function setupTabs(tabButtons, tabContents) {
         });
     });
 
-    // Показываем вкладку, которая изначально помечена как active в HTML
      const initialActiveTab = document.querySelector('.tab-button.active');
      if (initialActiveTab) {
          showTab(initialActiveTab.dataset.tab, tabButtons, tabContents);
@@ -103,8 +101,6 @@ export function showTab(targetTabId, tabButtons, tabContents) {
 
 /**
  * Проверяет, является ли значение фильтра истории корректным.
- * В данном простом варианте эта функция находится в UI, т.к. используется только здесь.
- * Для более сложной валидации лучше вынести в отдельный модуль.
  * @param {string} value - Значение для проверки.
  * @returns {boolean} true, если значение корректно, иначе false.
  */
@@ -112,7 +108,6 @@ export function isValidFilterValue(value) {
     const validFilters = ['all', 'win', 'lose', 'draw'];
     return validFilters.includes(value);
 }
-
 
 /**
  * Преобразует выбор из строки в удобочитаемый текст.
