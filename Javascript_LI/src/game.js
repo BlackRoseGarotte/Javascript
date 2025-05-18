@@ -6,13 +6,11 @@
  * @property {'win'|'lose'|'draw'} result - Результат раунда ('win', 'lose', 'draw').
  */
 
-
-
 let playerScore = 0;
 let computerScore = 0;
 let roundNumber = 0;
 /** @type {RoundHistory[]} */
-let history = []; // Массив объектов для хранения истории игр
+let history = []; 
 
 
 /**
@@ -53,19 +51,16 @@ function determineWinner(playerChoice, computerChoice) {
  * @returns {RoundHistory} Объект с деталями прошедшего раунда.
  */
 export function playGameRound(playerChoice) {
-    roundNumber++; // Увеличиваем номер раунда
-
+    roundNumber++; 
     const computerChoice = getComputerChoice();
     const result = determineWinner(playerChoice, computerChoice);
 
-    // Обновляем счет
     if (result === 'win') {
         playerScore++;
     } else if (result === 'lose') {
         computerScore++;
     }
 
-    // Добавляем запись в историю
     const roundData = {
         round: roundNumber,
         player: playerChoice,
@@ -74,13 +69,7 @@ export function playGameRound(playerChoice) {
     };
     history.push(roundData);
 
-     // Можно добавить ограничение на размер истории
-     // if (history.length > 50) { // Например, последние 50 раундов
-     //      history.shift(); // Удалить самый старый
-     // }
-
-
-    return roundData; // Возвращаем данные раунда для обновления UI
+    return roundData; 
 }
 
 
@@ -104,7 +93,7 @@ export function getHistoryData(filter = 'all') {
     if (filter === 'all') {
         return [...history]; // Возвращаем копию всего массива
     } else {
-        // Фильтруем по результату
+        
         return history.filter(round => round.result === filter);
     }
 }
