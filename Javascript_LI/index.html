@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КНБ Простой</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Камень, Ножницы, Бумага</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="game">Игра</button>
+            <button class="tab-button" data-tab="history">История</button>
+        </div>
+
+        <div id="tab-game" class="tab-content active">
+            <div class="game-area">
+                <div id="score">Счет: 0 - 0</div>
+                <div id="result">Сделайте ваш выбор.</div>
+                <div id="choices">
+                    <button data-choice="rock">Камень</BUTTON>
+                    <button data-choice="paper">Бумага</BUTTON>
+                    <button data-choice="scissors">Ножницы</BUTTON>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-history" class="tab-content hidden">
+            <div class="history-area">
+                <h3>История раундов</h3>
+                <div class="history-controls">
+                    <label for="historyFilter">Фильтр:</label>
+                    <select id="historyFilter">
+                        <option value="all">Все</option>
+                        <option value="win">Победа</option>
+                        <option value="lose">Поражение</option>
+                        <option value="draw">Ничья</option>
+                    </select>
+                     <button id="clearHistory">Очистить</button>
+                </div>
+                <div id="historyList">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
